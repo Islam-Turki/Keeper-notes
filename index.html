@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="هو تطبيق ويب بسيط لتدوين الملاحظات وتنظيمها. يمكنك إضافة ملاحظاتك، إضافة وسوم لتصنيفها، البحث عنها، وتصفية الملاحظات حسب الوسوم. يتم تخزين البيانات محليًا دون الحاجة للإنترنت أو قاعدة بيانات">
+    <meta name="author" content="Islam turki , Abdurahman Sharif">
+    <title>Keeper | الملاحظات</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- header -->
+
+<header class="top-bar">
+  <h2>Keeper</h2>
+
+  <!-- nav bar -->
+
+  <nav>
+    <a href="index.html" class="nav-link active">الملاحظات</a>
+    <a href="categories.html" class="nav-link">التصنيفات</a>
+    <a href="overview.html" class="nav-link">نظرة عامة</a>
+    <a href="about.html" class="nav-link">حول</a>
+  </nav>
+
+  <input type="search" id="searchInput" placeholder="ابحث في الملاحظات...">
+</header>
+
+  <!-- controls section -->
+
+<section class="controls">
+  <input id="titleInput" placeholder="عنوان الملاحظة">
+  <textarea id="noteInput" placeholder="اكتب ملاحظتك هنا..."></textarea>
+  <input id="tagsInput" placeholder="وسوم (دراسة، عمل)">
+  <button id="addBtn">إضافة ملاحظة</button>
+</section>
+
+<section id="notesContainer"></section>
+
+  <!-- edit dialog -->
+
+<dialog id="editModal">
+  <form method="dialog" class="modal">
+    <h3>تعديل الملاحظة</h3>
+    <input id="editTitle">
+    <textarea id="editContent"></textarea>
+    <input id="editTags">
+    <menu>
+      <button value="cancel">إلغاء</button>
+      <button id="saveEdit">حفظ</button>
+    </menu>
+  </form>
+</dialog>
+
+<script src="index.js"></script>
+</body>
+</html>

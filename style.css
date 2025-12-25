@@ -1,0 +1,300 @@
+/* global styles*/
+
+* {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#fbc2eb, #a6c1ee);
+  color: #333;
+}
+
+p{
+  word-break: break-word
+  ;
+}
+
+/* nav bar */
+
+.top-bar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  flex-wrap: wrap;
+}
+
+.top-bar h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.top-bar nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.top-bar nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+
+.top-bar nav a:hover,
+.top-bar nav a.active {
+  background: rgba(0,0,0,0.1);
+}
+
+/* search input */
+
+.top-bar input[type="search"] {
+  margin-left: auto;
+  width: 240px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+}
+
+/* input section */
+
+.controls {
+  max-width: 500px;
+  margin: 35px auto ;
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+textarea{
+  resize: none;
+}
+
+.controls input,
+.controls textarea {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 15px;
+  width: 100%;
+}
+
+.controls textarea {
+  min-height: 90px;
+}
+
+.controls button {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  background: #ffd000;
+}
+
+.controls button:hover {
+  opacity: 0.9;
+}
+
+/* notes container */
+
+#notesContainer {
+  max-width: 1100px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+/* note card */
+
+.note {
+  padding: 18px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.note-header {
+  display: flex;
+  gap: 10px;
+}
+
+.note-title {
+  font-weight: 700;
+  font-size: 16px;
+  word-break: break-word;
+  flex: 1;
+}
+
+.note-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.note-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: 16px;
+}
+
+.note-buttons button:hover {
+  opacity: 1;
+}
+
+/* tags */
+
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: rgba(0,0,0,0.1);
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* note dates */
+
+.note-date {
+  margin-top: auto;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* dialog */
+
+dialog {
+  border: none;
+  border-radius: 18px;
+  padding: 20px;
+  width: 90%;
+  max-width: 320px;
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,0.4);
+}
+
+.modal {
+  display: grid;
+  gap: 12px;
+}
+
+.modal input,
+.modal textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+}
+
+
+/* (categories,overview,about pages section) */
+
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+.page h3 {
+  margin-top: 0;
+  justify-self: center;
+  align-self: center;
+}
+
+/* tag list in (categories) */
+
+.tag-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag-list span {
+  padding: 8px 14px;
+  border-radius: 14px;
+  background: rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+/* overview stats */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.stat-card span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+/* about page */
+
+.about p {
+  line-height: 1.6;
+}
+
+.about ul {
+  padding-left: 20px;
+}
+
+/* responsive changes */
+
+@media (max-width: 768px) {
+  body {
+    padding: 14px;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .top-bar input[type="search"] {
+    width: 100%;
+    margin-left: 0;
+  }
+}
